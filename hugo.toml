@@ -1,6 +1,6 @@
-baseURL = 'https://bez-mifov.ru/'
-title = 'Новости ТБО'
-theme = 'PaperMod'
+baseURL = "https://bez-mifov.ru/"
+title = "Опровержение мифов: Бурачевский и полигон ТКО"
+theme = "PaperMod"
 defaultContentLanguage = "ru"
 
 enableRobotsTXT = true
@@ -10,38 +10,46 @@ summaryLength = 30
 [pagination]
   pagerSize = 10
 
-[params]
-  title = "Новости ТБО"
-  description = "Новости о мусорных полигонах"
-  
-  homeInfoParams = { Title = "Полигон, мусор", Content = "Мусорный полигон" }
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 
-  defaultTheme = 'auto'
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  title = "Правда о Бурачевском: опровержение слухов о мусоре и полигоне"
+  description = "Факты и судебные решения, опровергающие ложь о деятельности Бурачевского в сфере отходов. Разбор мифов."
+  
+  homeInfoParams = { Title = "Бурачевский и полигон: правда, а не мифы", Content = "Здесь вы найдёте документальные опровержения лжи о мусоре, отходах и судебных процессах." }
+
+  defaultTheme = "auto"
   ShowShareButtons = true
   ShowReadingTime = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   
-  author = "Имя автора"
-  authorEmail = "email@example.com"
+  author = "Редакция факт-чекинга"
+  authorEmail = "info@bez-mifov.ru"
 
 [menu]
   [[menu.main]]
     identifier = "about"
-    name = "О нас"
+    name = "О проекте"
     url = "/about/"
     weight = 10
   
   [[menu.main]]
     identifier = "blog"
-    name = "Блог"
+    name = "Опровержения"
     url = "/blog/"
     weight = 20
 
 [languages]
   [languages.ru]
-    languageCode = 'ru-ru'
-    languageName = 'Русский'
+    languageCode = "ru-ru"
+    languageName = "Русский"
     weight = 1
-    title = "Мусорный полигон"
+    title = "Бурачевский: опровержение мифов о мусоре и полигоне"
