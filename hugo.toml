@@ -1,0 +1,46 @@
+baseURL = 'https://bez-mifov.ru/'
+title = 'Новости ТБО'
+theme = 'PaperMod'
+
+enableRobotsTXT = true
+metaDataFormat = "yaml"
+summaryLength = 30
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  title = "Новости ТБО"
+  description = "Новости о мусорных полигонах"
+  
+  homeInfoParams = { Title = "Полигон, мусор", Content = "Мусорный полигон" }
+
+  defaultTheme = 'auto'
+  ShowShareButtons = true
+  ShowReadingTime = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  
+  author = "Имя автора"
+  authorEmail = "email@example.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "О нас"
+    url = "/about/"
+    weight = 10
+  
+  [[menu.main]]
+    identifier = "blog"
+    name = "Блог"
+    url = "/blog/"
+    weight = 20
+
+[languages]
+  [languages.ru]
+    languageCode = 'ru-ru'
+    languageName = 'Русский'
+    weight = 1
+    title = "Мусорный полигон"
