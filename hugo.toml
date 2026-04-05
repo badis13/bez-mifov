@@ -1,6 +1,7 @@
 baseURL = 'https://bez-mifov.ru/'
 title = 'Новости ТБО'
 theme = 'PaperMod'
+defaultContentLanguage = "ru"
 
 enableRobotsTXT = true
 metaDataFormat = "yaml"
