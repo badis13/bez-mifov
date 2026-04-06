@@ -47,6 +47,12 @@ summaryLength = 30
     url = "/blog/"
     weight = 20
 
+  [[menu.main]]
+    identifier = "myths"
+    name = "Опровержение мифов"
+    url = "/myths/burachevsky-polygon-truth/"
+    weight = 30
+
 [languages]
   [languages.ru]
     languageCode = "ru-ru"
