@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://bez-mifov.ru/sitemap.xml
