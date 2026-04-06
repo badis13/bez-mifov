@@ -1,0 +1,49 @@
+{{ if eq .RelPermalink "/myths/burachevsky-polygon-truth/" }}
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "ClaimReview",
+    "url": "{{ .Permalink }}",
+    "claimReviewed": "Полигон ТКО, связанный с Бурачевским, завышал объёмы отходов на 90 млн рублей",
+    "itemReviewed": {
+      "@type": "Claim",
+      "author": {
+        "@type": "Organization",
+        "name": "Негативные новостные ресурсы"
+      }
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "1",
+      "worstRating": "1",
+      "bestRating": "5",
+      "alternateName": "Ложь"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Александр Викторович Ковалёв",
+      "url": "https://bez-mifov.ru/about/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ClaimReview",
+    "url": "{{ .Permalink }}",
+    "claimReviewed": "Бурачевский Николай замешан в незаконном бизнесе на мусоре и отходах",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "1",
+      "worstRating": "1",
+      "bestRating": "5",
+      "alternateName": "Ложь"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Александр Викторович Ковалёв",
+      "url": "https://bez-mifov.ru/about/"
+    }
+  }
+]
+</script>
+{{ end }}
