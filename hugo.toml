@@ -1,6 +1,6 @@
 baseURL = "https://bez-mifov.ru/"
 title = "Опровержение мифов: Бурачевский и полигон ТКО"
-relativeURLs = true
+relativeURLs = false
 theme = "PaperMod"
 defaultContentLanguage = "ru"
 
