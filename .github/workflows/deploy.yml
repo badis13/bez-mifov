@@ -23,7 +23,7 @@ jobs:
         rm -rf public
         hugo --minify
 
-    - name: Deploy to Yandex Cloud
+    - name: Deploy HTML (with charset)
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
@@ -32,4 +32,22 @@ jobs:
         aws s3 sync public/ s3://bez-mifov.ru/ \
           --delete \
           --acl public-read \
+          --exclude "*.css" \
+          --exclude "*.js" \
+          --exclude "*.xml" \
+          --exclude "*.json" \
+          --exclude "*.txt" \
+          --content-type "text/html; charset=utf-8" \
+          --endpoint-url https://storage.yandexcloud.net
+
+    - name: Deploy CSS/JS/etc
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: ru-central1
+      run: |
+        aws s3 sync public/ s3://bez-mifov.ru/ \
+          --delete \
+          --acl public-read \
+          --exclude "*.html" \
           --endpoint-url https://storage.yandexcloud.net
